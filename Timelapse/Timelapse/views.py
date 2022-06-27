@@ -15,10 +15,3 @@ def images(request, imagesDate):
         return render(request, 'images.html', {'timelapseImages': img, 'dates': dates})
     else:
         return render(request, 'index.html', {'dates': dates})
-
-# def images(request):
-#     img = TimelapseImage.objects.get(date=imagesDate)
-#     if img is not None:
-#         return render(request, 'images.html', {'timelapseImage': img})
-#     else:
-#         raise Http404('Image doesn\'t exist')
