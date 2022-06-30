@@ -24,7 +24,7 @@ from Timelapse.settings import MEDIA_ROOT
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
-    path('<str:imagesDate>', views.images),
+    path('<str:imagesDate>', views.images), # String parameter (selected date) to show images for the date 
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=MEDIA_ROOT) 
